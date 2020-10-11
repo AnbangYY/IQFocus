@@ -1,0 +1,42 @@
+# Write your name and UID here.
+#
+reviewer:
+    name: Zhongxuan Liu
+    uid: u6730788
+
+# Write the name of the author of the code here.
+#
+author:
+  name: Anbang Li
+  uid: u6744849
+
+# Write the class or method being reviewed here.
+#
+component:
+    private void makePieceA() {
+        root.getChildren();
+        ImageView pieceA = new ImageView();
+        pieceA.setImage(new Image(new File ("assets/a.png").toURI().toString()));
+        pieceA.setFitWidth(120);
+        pieceA.setFitHeight(80);
+        pieceA.setLayoutX(20);
+        pieceA.setLayoutY(400);
+        root.getChildren().add(pieceA);
+
+    }
+
+
+# Write a list of review comments here.
+#
+comments:
+  - using setImage to set the path of picture
+  - using setFitWidth to set the width of picture
+  - using setFitHeight to set the height of picture
+  - using setLayoutX and Y to set the starting position
+  - At last using root.getchildren to get child node to show the picture
+  - Through these methods, the basic implementation of small blocks of display, pieces can be displayed on the game board.But the main features were not implemented.
+  - Can use a loop to implement the show of picture to improve the efficiency of code.
+  - As shown above, Anbang's code is highly readable.
+
+
+

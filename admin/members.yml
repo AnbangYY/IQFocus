@@ -1,0 +1,9 @@
+# List the membership of this group.  (Remove entries if you have fewer
+# than three members.)
+#
+
+members:
+  - name: Zhongxuan Liu
+    uid: u6730788
+  - name: Anbang Li
+    uid: u6744849

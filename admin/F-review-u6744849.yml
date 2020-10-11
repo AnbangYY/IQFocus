@@ -1,0 +1,68 @@
+# Write your name and UID here.
+#
+reviewer:
+  name: Li Anbang
+  uid: u6744849
+
+# Write the name of the author of the code here.
+#
+author:
+  name: ZhongXuan Liu
+  uid: u6730788
+
+# Write the class or method being reviewed here.
+#
+component:
+  private void makePieces() {
+  pieces.getChildren().clear();
+  int i =0;
+  for (char m = 'a'; m < 'k'; m++) {
+  draggablePieces d = new draggablePieces(m,true);
+  pieces.getChildren().add(d);
+  PS[i] = d;
+  i = i + 1;}}
+
+
+
+  private void makeBoard() {
+  board.getChildren().clear();
+
+  ImageView baseboard = new ImageView();
+  baseboard.setImage(new Image(BOARD_URI));
+  baseboard.setFitWidth(GAME_WIDTH);
+  baseboard.setFitHeight(GAME_HEIGHT);
+  baseboard.setLayoutX(GAME_X);
+  baseboard.setLayoutY(GAME_Y);
+  board.getChildren().add(baseboard);
+
+  board.toBack();
+  }
+
+
+  private void makeControls() {
+  Button button = new Button("Restart");
+  button.setLayoutX(700);
+  button.setLayoutY(600);
+  button.setOnAction(new EventHandler<ActionEvent>() {
+  @Override
+  public void handle(ActionEvent event) {resetPieces();}
+  });
+  control.getChildren().add(button);
+  }
+
+# Write a list of review comments here.
+#
+comments:
+  - First part of code creates a method makePieces(), which puts tile pieces into the viewer window. This code is
+  - commented with its utility, and the method name is stated clearly. Hence this code is well-documented.
+  - In this piece of code, the best feature is the for loop of makePieces(). The for loop gives makePieces() method the
+  - ability to put every piece into the board, rather than creating one method for each piece. This makes the code
+  - neater.
+  - Plus, there are methods such as makeBoard() and makeControl(), makeBoard can add class board and make board show in
+  - viewer window and makeControl helps to add class control into the game and make pieces interactable. These 3 methods
+  - are consistent with their naming and java conventions, as the first alphabet of first word is lower cased and the
+  - first alphabet of second word is upper cased. And all three methods will be called in the main method when the game
+  - runs.
+  - The idea of generating different methods for different functionalities makes the code more readable.
+
+
